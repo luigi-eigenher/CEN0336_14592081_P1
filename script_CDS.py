@@ -2,6 +2,12 @@
 import sys
 
 #Recebendo os dados
+if len(sys.argv) != 8:
+    print("================================--==========================")
+    print("Erro: informe uma sequência de DNA e seis coordenadas.")
+    print("================================--==========================")
+    sys.exit()
+
 seq = sys.argv[1]
 n1, n2, n3, n4, n5, n6 = sys.argv[2:8]
 
@@ -9,9 +15,6 @@ lista = [n1, n2, n3, n4, n5, n6]
 seq = seq.upper() #Joga tudo pra UPPER
 
 #Conferindo os dados
-if len(sys.argv) != 8:
-    print("Erro: informe uma sequência de DNA e seis coordenadas.")
-    sys.exit()
 
 for base in seq:
     if base not in "ATCG":
